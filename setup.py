@@ -431,7 +431,8 @@ devel = [
     'click==6.7',
     'contextdecorator;python_version<"3.4"',
     'coverage',
-    'docutils>=0.14, <0.16',
+    'docutils>=0.14, <0.16; python_version<"3.0"',
+    'docutils;python_version>="3.0"',
     'ecdsa<0.15',  # Required for moto 1.3.14
     'flake8>=3.6.0',
     'flake8-colors',
@@ -649,7 +650,8 @@ INSTALL_REQUIREMENTS = [
     'sqlalchemy_jsonfield~=0.9;python_version>="3.5"',
     'tabulate>=0.7.5, <0.9',
     'tenacity==4.12.0',
-    'thrift>=0.11.0',
+    'thrift>=0.9.2;python_version>="3.0"',
+    'thrift==0.9.3;python_version<"3.0"',  # required by thrifts_sasl for python 2.0
     'typing;python_version<"3.5"',
     'typing-extensions>=3.7.4;python_version<"3.8"',
     'tzlocal>=1.4,<2.0.0',
